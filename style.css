@@ -1,0 +1,328 @@
+*{
+  margin: 0; /* Remove margem padrão de todos os elementos */
+  padding: 0; /* Remove padding padrão de todos os elementos */
+  box-sizing: border-box; /* Inclui borda e padding no tamanho total do elemento */
+  font-family: Arial, Helvetica, sans-serif; /* Fonte padrão da página */
+}
+
+body{
+  position: relative; /* Para posicionamento de filhos absolutos, como o vídeo */
+  height: fit-content; /* Ajusta a altura ao conteúdo (pode ser redundante com height: 100vh abaixo) */
+  width:100%; /* Ocupa toda a largura da tela */
+  height: 100vh; /* Altura da viewport (tela inteira) */
+  overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse o body */
+  display: flex; /* Torna o body um flex container */
+  padding: 30px 0; /* Espaçamento superior e inferior */
+  justify-content: center; /* Centraliza horizontalmente os elementos filhos */
+  align-items: center; /* Centraliza verticalmente os elementos filhos */
+}
+
+.back-vid{
+  position: absolute; /* Permite posicionar o vídeo sobre o body sem afetar outros elementos */
+  left: 0; /* Alinha à esquerda */
+  top: 0; /* Alinha ao topo */
+  z-index: -1; /* Coloca o vídeo atrás de todo o conteúdo */
+}
+
+/* Ajusta o vídeo em telas com proporção menor que 16/9 */
+@media (max-aspect-ratio: 16/9){
+  .back-vid{
+    width: auto;
+    height: 100%; /* Preenche a altura da tela */
+  }
+}
+
+/* Ajusta o vídeo em telas com proporção maior que 16/9 */
+@media (min-aspect-ratio: 16/9){
+  .back-vid{
+    width: 100%; /* Preenche a largura da tela */
+    height: auto;
+  }
+}
+
+.main-section{
+  width: 90%; /* Largura do conteúdo principal */
+  height: 90%; /* Altura do conteúdo principal */
+  background-color:#4ad0ee1b; /* Cor de fundo semitransparente (efeito glass) */
+  backdrop-filter: blur(10px); /* Desfoca o fundo atrás da main-section */
+  border-radius: 50px; /* Bordas arredondadas */
+  box-shadow: 5px 5px 20px 1px #4acfee; /* Sombra para efeito de profundidade */
+}
+
+nav{
+  display: flex; /* Navbar flexível */
+  justify-content: space-between; /* Espaço entre título e links */
+  align-items: center; /* Alinha verticalmente */
+  padding: 30px 40px; /* Espaçamento interno */
+}
+
+nav h1{
+  color: white; /* Cor do título */
+  font-size: 30px; /* Tamanho da fonte */
+  font-weight: 900; /* Peso da fonte (negrito forte) */
+}
+
+nav ul{
+  list-style: none; /* Remove marcadores da lista */
+  display: flex; /* Exibe os itens horizontalmente */
+}
+
+nav a{
+  color: white; /* Cor dos links */
+  text-decoration: none; /* Remove sublinhado */
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.2s; /* Transição suave para hover */
+  padding: 0px 25px; /* Espaço entre links */
+}
+
+nav a:hover ,
+.active {
+  color : #4acfee; /* Cor ao passar mouse ou link ativo */
+  text-decoration: underline; /* Sublinhado ao hover/ativo */
+}
+
+.principal{
+  display: flex; /* Flex container */
+  align-items: center; /* Alinha verticalmente */
+  height: 70%; /* Altura da seção */
+  padding: 0 10%; /* Espaço horizontal */
+  color: white; /* Cor do texto */
+  justify-content: space-between; /* Espaço entre título e imagem */
+}
+
+.principal h1{
+  font-size: 60px; /* Tamanho grande do título */
+}
+
+.principal h2{
+  margin-top: 20px;
+  font-size: 30px;
+  text-transform: uppercase; /* Letras maiúsculas */
+  background:linear-gradient(to right, #4acfee, #53f8c9, #6070fd, #5bbdff, #4acfee); /* Gradiente animado */
+  background-size: 200%; /* Necessário para animação do gradiente */
+  background-clip: text; /* Aplica gradiente somente ao texto */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Texto transparente para mostrar o gradiente */
+  animation: animate-gradient 2.5s linear infinite; /* Animação contínua */
+}
+
+.principal p{
+  max-width: 450px; /* Limita largura do parágrafo */
+  margin-top: 7px;
+  margin-bottom: 20px;
+}
+
+@keyframes animate-gradient {
+  to {
+    background-position: 200%; /* Move o gradiente ao longo do texto */
+  }
+}
+
+.Buttons{
+  display: flex; /* Contêiner flexível para botões */
+}
+
+.btn{
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #4acfee;
+  border: 2px solid #4acfee;
+  border-radius: 40px; /* Botões arredondados */
+  box-shadow: 0 0 10px #4acfee;
+  font-size: 16px;
+  font-weight: 900;
+  color: #0e1217;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: 0.3s;
+  text-wrap: nowrap;
+}
+
+.btn:hover{
+  background-color: transparent;
+  box-shadow: none;
+  color: #4acfee;
+}
+
+.ul-icons{
+  display: flex; /* Lista de ícones horizontal */
+  align-items: center;
+}
+
+.ul-icons li{
+  list-style: none; /* Remove marcadores */
+  margin-left: 10px;
+}
+
+.ul-icons a{
+  display: inline-flex;
+  padding: 8px;
+  border: 2px solid #4acfee;
+  border-radius: 50%; /* Circular */
+  font-size: 20px;
+  color: #4acfee;
+  text-decoration: none;
+  margin: 0 7px;
+  transition: 0.3s;
+}
+
+.ul-icons a:hover{
+  background: #4acfee;
+  color: #0e1217;
+  box-shadow: 0 0 10px #4acfee;
+}
+
+.gabriel-img{
+  width: 400px;
+  height: 400px;
+  background-color: none;
+  position:relative;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 0 10px #4eddfd;
+  transition: 0.5s;
+}
+
+.gabriel-img:hover{
+  box-shadow: 0 0 25px #4acfee;
+}
+
+.gabriel-img img{
+  position: absolute;
+  width: 85%;
+  mix-blend-mode: lighten;
+}
+
+.info-sec{
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  padding: 0 10%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.info-card{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  max-width: fit-content;
+}
+
+.info-sec h1{
+  font-size: 55px;
+  text-transform: uppercase;
+  background:linear-gradient(to right, #4acfee, #53f8c9, #6070fd, #5bbdff, #4acfee);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 2.5s linear infinite;
+  margin-right: 10px;
+}
+
+.info-sec p{
+  color: white;
+  font-size: 20px;
+}
+
+/* Media queries para telas grandes */
+@media (min-width: 1220px) {
+  body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .info-sec{
+    margin-top: 30px;
+  }
+}
+
+/* Media queries para telas menores */
+@media (max-width: 980px) {
+  body{
+    height: fit-content;
+    overflow: auto;
+  }
+
+  .main-section nav ul{
+    display: none; /* Esconde links da navbar em telas pequenas */
+  }
+  .Buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .principal{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gabriel-img{
+    width: 400px;
+    height: 400px;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width:440px) {
+  .gabriel-img{
+    width: 350px;
+  }
+
+  .principal  h1{
+    font-size: 40px;
+  }
+}
+
+/* Seções específicas */
+.Sobre-mim, .Projetos, .Contatos, .Formacao{
+  display: flex;
+  align-items: center;
+  height: 70%;
+  padding: 0 10%;
+  color: white;
+  justify-content: space-between;
+}
+
+.Sobre-info p, .Projetos-info p, .Contatos-info p, .Formacao-info p{
+  max-width: 450px;
+  margin-top: 7px;
+  margin-bottom: 20px;
+}
+
+.Formacao-info img{
+  width: 40%;
+}
+
+/* Wrapper para centralizar formulário */
+.form-wrapper {
+  display: flex; /* Flex container */
+  justify-content: center;  /* Centraliza horizontalmente */
+  align-items: center;      /* Centraliza verticalmente */
+  min-height: 50vh;        /* Altura mínima */
+  padding-top: 100px;        /* Evita sobreposição da navbar */
+  position: relative;        /* Para z-index funcionar */
+  z-index: 1;               /* Coloca acima do vídeo */
+}
+.gabriel-img {
+  width: 400px;           /* tamanho fixo do container */
+  height: 400px;          /* altura igual à largura = círculo */
+  border-radius: 50%;     /* deixa a div redonda */
+  overflow: hidden;       /* esconde o excesso da imagem */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #4acfee; /* opcional: borda decorativa */
+}
+
+.gabriel-img img {
+  width: 100%;          /* ocupa todo o espaço */
+  height: 100%;
+  object-fit: cover;    /* faz a imagem se ajustar sem distorcer */
+}

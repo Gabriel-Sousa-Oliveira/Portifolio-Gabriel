@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"> <!-- Define codificação de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade para dispositivos móveis -->
+  <title>Portifolio CV Gabriel Sousa</title> <!-- Título da página -->
+  
+  <!-- Biblioteca AOS para animações ao scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- CSS do site -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Ícones Boxicons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <!-- Vídeo de fundo -->
+  <video autoplay loop muted plays-inline class="back-vid">
+    <source src="images/Background3.mp4" type="video/mp4"> <!-- Fonte do vídeo -->
+  </video>
+
+  <!-- Seção principal do site -->
+  <section class="main-section">
+    
+    <!-- Navbar -->
+    <nav>
+      <!-- Título do site/usuário -->
+      <h1 data-aos="zoom-in" data-aos-duration="1000">
+        <span style="color: #4acfee;">Gabriel</span> Sousa Oliveira
+      </h1>
+
+      <!-- Menu de navegação -->
+      <ul>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a class="active" href="index.html">Inicio</a></li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="Sobre-mim.html">Sobre mim</a></li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="Projetos.html">Projetos</a></li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="Formacao.html">Formação</a></li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="Contato.html">Contato</a></li>
+      </ul>
+    </nav>
+
+    <!-- Seção principal (apresentação inicial) -->
+    <div class="principal">
+
+      <!-- Parte do texto da pagina principal -->
+      <div class="principal-info">
+        <!-- Título principal com animação -->
+        <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">Olá, sou o Gabriel</h1>
+        
+        <!-- Subtítulo com animação -->
+        <h2 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">Sou cientista de dados</h2>
+        
+        <!-- Parágrafo de apresentação -->
+        <p data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1000">
+          Tento superar desafios com o uso de dados e basear minhas decisões nos fatos descritos por eles.
+        </p>
+
+        <!-- Botão de contato e ícones de redes sociais -->
+        <div class="Buttons">
+          <!-- Botão de contato com link para WhatsApp -->
+          <button class="btn" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="1100">
+            <a href="https://wa.me/5511995993164" target="_blank" style="text-decoration: none; color: white; font-weight: bold;">
+             Entre em contato
+            </a>
+          </button> 
+
+          <!-- Lista de ícones sociais -->
+          <ul class="ul-icons">
+            <li><a href="https://github.com/Gabriel-Sousa-Oliveira" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200"><i class='bx bxl-github'></i></a></li>
+            <li><a href="https://wa.me/5511995993164" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1300"><i class='bx bxl-whatsapp'></i></a></li>
+            <li><a href="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1400"><i class='bx bxl-youtube'></i></a></li>
+            <li><a href="https://www.linkedin.com/in/gabriel-sousa-oliveira-79518250/" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500"><i class='bx bxl-linkedin'></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Minha imagem de rosto(lado direito) -->
+      <div class="gabriel-img" data-aos="zoom-in-left" data-aos-duration="2500">
+        <img src="images/Gabriel.jpg" alt="minha-img">
+      </div>
+    </div>
+
+    <!-- Seção de informações rápidas -->
+    <div class="info-sec">
+      <!-- Cartões de info -->
+      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1600">
+        <h1>2+</h1>
+        <p>Anos de <br> Experiencia</p>
+      </div>
+
+      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1700">
+        <h1>7+</h1>
+        <p>Tecnologias<br> Aprendidas</p>
+      </div>
+
+      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1800">
+        <h1>25+</h1>
+        <p>Participações em projetos <br> como freelancer e ou acâdemico</p>
+      </div>
+
+      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1900">
+        <h1>+12</h1>
+        <p>Clientes<br> satisfeitos</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Script para ativar animações AOS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init(); <!-- Inicializa animações AOS -->
+  </script>
+</body>
+</html>

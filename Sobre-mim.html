@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
+<head>
+  <meta charset="UTF-8"> <!-- Define codificação de caracteres UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade para dispositivos móveis -->
+  <title>Document</title> <!-- Título da aba do navegador -->
+
+  <!-- Biblioteca AOS (Animate On Scroll) para animações ao rolar a página -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- CSS principal do site -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Boxicons: biblioteca de ícones -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <!-- Vídeo de fundo -->
+  <video autoplay loop muted plays-inline class="back-vid">
+    <source src="images/Background3.mp4" type="video/mp4"> <!-- Fonte do vídeo -->
+  </video>
+
+  <!-- Seção principal do site -->
+  <section class="main-section">
+
+    <!-- Navbar -->
+    <nav>
+      <!-- Nome do usuário com animação ao carregar -->
+      <h1 data-aos="zoom-in" data-aos-duration="1000">
+        <span style="color: #4acfee;">Gabriel</span> Sousa Oliveira
+      </h1>
+
+      <!-- Menu de navegação -->
+      <ul>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Inicio</a></li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a class="active" href="Sobre-mim.html">Sobre mim</a></li> <!-- Página atual -->
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="Projetos.html">Projetos</a></li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="Formacao.html">Formação</a></li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="Contato.html">Contato</a></li>
+      </ul>
+    </nav>
+
+    <!-- Seção "Sobre mim" -->
+    <div class="Sobre-mim">
+      <div class="Sobre-info">
+        <p>
+          Sou um profissional apaixonado por tecnologia, um interesse que surgiu desde criança através do amor por games. 
+          Tenho experiência em Python, C++, SQL, Power Automates e dentre outras técnologias.
+          Gosto de resolver problemas de forma eficiente, sempre sendo proativo e compromissado. 
+          Busco constantemente me atualizar, procurando novos desafios que me permitam crescer profissionalmente e estudando sobre meus interesses profissionais e pessoais. 
+          Trabalho bem em equipe, porém não me incomodo em assumir trabalhos individuais.
+        </p>
+        <p>
+          Minha Jornada em dados começou quando eu quis melhorar meu desempenho nos games competitivos que eu jogava, 
+          como Counter Strike e League of Legends, este último sendo meu foco principal. 
+          Depois de algumas revisões em minhas estatísticas, descobri algumas de minhas principais falhas dentro do jogo e, 
+          com o tempo, consegui corrigir erros para melhorar significativamente meu desempenho nas partidas.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Script para animações AOS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init(); <!-- Inicializa as animações AOS -->
+  </script>
+</body>
+</html>

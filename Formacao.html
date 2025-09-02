@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- Define que o documento é HTML5 e o idioma é português do Brasil -->
+<head>
+  <meta charset="UTF-8"> <!-- Configura a codificação de caracteres para UTF-8 (suporta acentos e caracteres especiais) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o site responsivo, ajustando ao tamanho da tela -->
+  <title>Document</title> <!-- Título da aba do navegador -->
+  
+  <!-- Biblioteca de animações AOS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
+  <!-- Arquivo CSS externo (personalização do site) -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Biblioteca de ícones Boxicons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<!-- Biblioteca de ícones Font Awesome (para ícones extras, como check, hourglass, etc.) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Vídeo de fundo (galáxia animada) -->
+  <video autoplay loop muted plays-inline class="back-vid">
+   <source src="images/Background3.mp4" type="video/mp4"> <!-- Caminho do vídeo de fundo -->
+  </video>
+
+  <!-- Seção principal -->
+  <section class="main-section">
+    
+    <!-- Barra de navegação -->
+    <nav>
+      <!-- Nome com destaque no primeiro nome -->
+      <h1 data-aos="zoom-in" data-aos-duration="1000">
+        <span style="color: #4acfee;">Gabriel</span> Sousa Oliveira
+      </h1>
+
+      <!-- Links do menu de navegação -->
+      <ul>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Inicio</a></li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="Sobre-mim.html">Sobre mim</a></li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="Projetos.html">Projetos</a></li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a class="active" href="Formacao.html">Formação</a></li> <!-- Página atual -->
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="Contato.html">Contato</a></li>
+      </ul>
+    </nav>
+
+    <!-- Conteúdo da seção de Formação -->
+    <div class="Formacao">
+      <div class="formacao-info">
+        <h1>Formação Acadêmica</h1> <!-- Título da seção -->
+
+        <!-- Lista das formações -->
+        <ul style="list-style: none; padding: 0;"> <!-- Remove o estilo padrão da lista -->
+          
+          <!-- Curso de Ciência de Dados (em andamento) -->
+          <li>
+            <img src="/images/Uninter.png" alt="ícone" style="width:25px; vertical-align:middle; margin-right:5px;">
+            Tecnólogo em  
+            <a href="https://www.uninter.com/graduacao/a-distancia/tecnologia-em-ciencia-de-dados/" target="_blank" style="text-decoration: none; color: white; font-weight: bold;">
+              Ciência de dados
+            </a> 
+            pelo 
+            <a href="https://www.uninter.com/" target="_blank" style="text-decoration: none; color: white; font-weight: bold;">
+              Centro Universitario Uninter
+            </a> 
+            <i class="fa-solid fa-hourglass-half"></i> <!-- Ícone de progresso (curso em andamento) -->
+          </li>
+
+          <!-- Curso de Mecatrônica Industrial (concluído) -->
+          <li>
+            <img src="/images/FatecSALogo.png" alt="ícone" style="width:25px; vertical-align:middle; margin-right:5px;">
+            Tecnólogo em  
+            <a href="https://fatecsantoandre.edu.br/index.php?p=Mecatronica" target="_blank" style="text-decoration: none; color: white; font-weight: bold;">
+              Mecatrônica Industrial
+            </a> 
+            pela 
+            <a href="http://fatecsantoandre.edu.br/index.php" target="_blank" style="text-decoration: none; color: white; font-weight: bold;">
+              Fatec Santo André 
+            </a> 
+            <i class="fa-solid fa-square-check" style="color: green;"></i> <!-- Ícone verde confirmando conclusão -->
+          </li>
+
+          <!-- Curso Técnico em Eletrônica (concluído) -->
+          <li>
+            <img src="/images/JuliodeMesquita.png" alt="ícone" style="width:25px; vertical-align:middle; margin-right:5px;">
+            Técnico em 
+            <a href="https://etecjuliodemesquita.cps.sp.gov.br/cursos/eletronica/" target="_blank" style="text-decoration: none; color: white; font-weight: bold;">
+              Eletrônica
+            </a> 
+            pela 
+            <a href="https://etecjuliodemesquita.cps.sp.gov.br/cursos/eletronica/" target="_blank" style="text-decoration: none; color: white; font-weight: bold;">
+              ETEC Júlio de Mesquita
+            </a> 
+            <i class="fa-solid fa-square-check" style="color: green;"></i> <!-- Ícone verde confirmando conclusão -->
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts para animações do AOS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init(); <!-- Inicializa a biblioteca AOS para as animações funcionarem -->
+  </script>
+</body>
+</html>

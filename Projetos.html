@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!-- Define a codificação de caracteres do documento -->
+  <meta charset="UTF-8">
+  <!-- Define a viewport para responsividade em dispositivos móveis -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Título da página -->
+  <title>Document</title>
+  
+  <!-- Biblioteca AOS (Animate On Scroll) para animações ao rolar a página -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
+  <!-- Estilo principal do site -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Biblioteca Boxicons para ícones -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+  <!-- Vídeo de fundo da página -->
+  <video autoplay loop muted plays-inline class="back-vid">
+    <source src="images/Background3.mp4" type="video/mp4">
+  </video>
+
+  <!-- Seção principal que contém conteúdo do site -->
+  <section class="main-section">
+
+    <!-- Navbar do site -->
+    <nav>
+      <!-- Nome / Logo do site com animação AOS -->
+      <h1 data-aos="zoom-in" data-aos-duration="1000">
+        <span style="color: #4acfee;">Gabriel</span> Sousa Oliveira
+      </h1>
+
+      <!-- Menu de navegação -->
+      <ul>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+          <a href="index.html">Inicio</a>
+        </li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <a href="Sobre-mim.html">Sobre mim</a>
+        </li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+          <a class="active" href="Projetos.html">Projetos</a> <!-- Página atual destacada -->
+        </li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+          <a href="Formacao.html">Formação</a>
+        </li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+          <a href="Contato.html">Contato</a>
+        </li>
+      </ul>
+    </nav>
+
+<!-- Seção Projetos -->
+<div class="Projetos">
+  <div class="Projetos-info">
+    <!-- Título da seção -->
+    <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">Meus Projetos</h1>
+    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      Aqui você encontrará meus trabalhos, desafios concluídos e projetos em desenvolvimento.
+    </p>
+  </div>
+    <!-- Script AOS para animações -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init(); // Inicializa as animações da biblioteca AOS
+    </script>
+
+</body>
+</html>
